@@ -1,0 +1,194 @@
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-soft-blue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+  --clr-cyan-bg: hsl(178, 100%, 50%, 0.5);
+  --clr-dark-blue-main: hsl(217, 54%, 11%);
+  --clr-dark-blue-card: hsl(216, 50%, 16%);
+  --clr-dark-blue-line: hsl(215, 32%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  background-color: var(--clr-dark-blue-main);
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content {
+  position: relative;
+  width: 100%;
+  max-width: 20rem;
+  padding: 1.5rem 1.5rem;
+  background-color: var(--clr-dark-blue-card);
+  border-radius: 0.9rem;
+  box-shadow: 0 1.25rem 1.8rem hsl(217, 50%, 7%);
+}
+
+.card-content .card-image {
+  position: relative;
+  width: 100%;
+  height: 17.5rem;
+  background-image: url(/images/image-equilibrium.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.card-content .card-image::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--clr-cyan-bg);
+  border-radius: inherit;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.card-content .card-image::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  background-image: url(/images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 3;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.card-content .card-image:hover::after,
+.card-content .card-image:hover::before {
+  opacity: 1;
+}
+
+.card-details {
+  position: relative;
+  padding-top: 0.6rem;
+}
+
+.card-details .title a {
+  font-size: 1.3rem;
+  color: var(--clr-white);
+  transition: all 0.5s;
+}
+
+.card-details .title a:hover {
+  color: var(--clr-cyan);
+}
+
+.card-details .card-desc {
+  padding-top: 0.6rem;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.5;
+  color: var(--clr-soft-blue);
+}
+
+.card-overlay {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+}
+
+.card-overlay::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 3.3rem;
+  border-bottom: 1px solid var(--clr-dark-blue-line);
+}
+
+.card-overlay .card-day {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--clr-soft-blue);
+}
+
+.card-overlay .card-day h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+.card-overlay .card-day:first-child h2 {
+  font-weight: 600;
+  color: var(--clr-cyan);
+}
+
+.card-author {
+  position: relative;
+  display: flex;
+  padding-top: 0.8rem;
+}
+
+.card-author .author-image {
+  position: relative;
+  width: 13%;
+}
+
+.card-author .author-image img {
+  border: 1px solid var(--clr-white);
+  border-radius: 50%;
+}
+
+.card-author .author-details {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 0.9rem;
+}
+
+.card-author .author-details h3 {
+  font-size: 1rem;
+  font-family: 400;
+  color: var(--clr-soft-blue);
+}
+
+.card-author .author-details .author-name {
+  color: var(--clr-white);
+  transition: all 0.5s;
+}
+
+.card-author .author-details .author-name:hover {
+  color: var(--clr-cyan);
+}
