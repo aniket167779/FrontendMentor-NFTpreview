@@ -23,12 +23,12 @@ Users should be able to:
 
 ### Screenshot
 
-
+![Screenshot 2023-02-02 164502](https://user-images.githubusercontent.com/69382363/216310112-f6e8d59c-e880-4a7a-99d7-1efe865aef5d.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://keen-crepe-28a7de.netlify.app/
 
 ## My process
 
